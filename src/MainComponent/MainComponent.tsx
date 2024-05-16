@@ -17,6 +17,7 @@ import {DailyData} from '../DailyData';
 import SplashScreen from 'react-native-splash-screen';
 
 export function MainComponent() {
+  const [initialLoad, setInitialLoad] = useState(true);
   const [location, setLocation] = useState('');
   const [renderCity, setRenderCity] = useState('');
   const [icon, setIcon] = useState('');
@@ -44,7 +45,7 @@ export function MainComponent() {
     city: location,
   });
 
-  const isLoading = isLoadingWeather && isLoadingForecast;
+  const isLoading = initialLoad && isLoadingWeather && isLoadingForecast;
 
   const [temps, setTemps] = useState<Array<string>>([]);
   const [tempIcons, setTempIcons] = useState<Array<string>>([]);
@@ -70,6 +71,12 @@ export function MainComponent() {
     refetch();
     refetchForecast();
   };
+
+  useEffect(() => {
+    if(forecast && weather) {
+      setInitialLoad(false);
+    }
+  }, []);
 
   useEffect(() => {
     if(!isLoading) {
