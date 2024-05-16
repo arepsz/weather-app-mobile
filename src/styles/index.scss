@@ -1,0 +1,149 @@
+.container {
+    display: flex;
+    align-items: center;
+    background-color: #1f4a89;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+
+    &__view {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.title {
+    font-size: 2.25rem;
+    color: black;
+    font-weight: 600;
+}
+
+.refresh {
+    background: rgba(255, 255, 255, 0.5);
+    color: black;
+    padding: 8px 16px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__text {
+        color: black;
+        font-size: 1.2rem;
+    }
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15% 5% 10%;
+
+    &__top {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        width: 100%;
+        height: 225px;
+
+        &__temp {
+            display: flex;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 16px 28px;
+            border-radius: 16px;
+            width: 100%;
+            height: 150px;
+            justify-content: space-between;
+
+            &__row {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+    }
+
+    &__daily {
+        display: flex;
+        gap: 20px;
+        width: 100%;
+        height: fit-content;
+        margin-bottom: 50px;
+
+        &__row {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            width: 100%;
+            height: fit-content;
+
+            &__element {
+                height: 140px;
+                width: 140px;
+                padding: 12px;
+                background: rgba(255, 255, 255, 0.7);
+                border-radius: 16px;
+                justify-content: space-between;
+
+                &__title {
+                    font-size: 1.2rem;
+                    color: black;
+                }
+
+                &__text {
+                   font-size: 1.8rem;
+                    color: black;
+                    font-weight: 600;
+                }
+
+                &__text_bottom {
+                    font-size: 1rem;
+                    color: black;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+.temps {
+    display: flex;
+    flex-direction: row;
+    overflow: scroll;
+    gap: 12px;
+    height: 120px;
+
+    &__item {
+        background: rgba(255, 255, 255, 0.7);
+        border-radius: 16px;
+        padding: 6px 12px;
+        align-items: center;
+        color: white;
+
+        &__text {
+            color: black;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        &__hour {
+            color: black;
+            font-weight: 500;
+        }
+    }
+}
+
+.scroll {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
