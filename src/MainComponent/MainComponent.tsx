@@ -33,7 +33,7 @@ export function MainComponent() {
   const {
     data: weather,
     refetch,
-    isLoading: isLoadingWeather,
+    isLoading: isLoadingWeather
   } = useGetWeather({
     city: location,
   });
@@ -76,7 +76,7 @@ export function MainComponent() {
     if(forecast && weather) {
       setInitialLoad(false);
     }
-  }, []);
+  }, [forecast, weather]);
 
   useEffect(() => {
     if(!isLoading) {
